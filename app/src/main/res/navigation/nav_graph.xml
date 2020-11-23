@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.math.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_level"
+            app:destination="@id/levelFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_chooseLevelFragment"
+            app:destination="@id/chooseLevelFragment" />
+        <action
+            android:id="@+id/action_gameSevenFragment"
+            app:destination="@id/gameSevenFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_gameEightFragment"
+            app:destination="@id/gameEightFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/levelFragment"
+        android:name="com.example.math.level.LevelFragment"
+        android:label="fragment_level"
+        tools:layout="@layout/fragment_level" >
+        <action
+            android:id="@+id/action_game_one"
+            app:destination="@id/gameOneFragment" />
+        <argument
+            android:name="type"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_game_two"
+            app:destination="@id/gameTwoFragment" />
+        <action
+            android:id="@+id/action_game_three"
+            app:destination="@id/gameThreeFragment" />
+        <action
+            android:id="@+id/actionReset"
+            app:destination="@id/resetDialogFragment" />
+        <action
+            android:id="@+id/action_game_four"
+            app:destination="@id/gameFourFragment" />
+        <action
+            android:id="@+id/action_game_six"
+            app:destination="@id/gameSixFragment" />
+        <action
+            android:id="@+id/action_game_nine"
+            app:destination="@id/gameNineFragment" />
+        <action
+            android:id="@+id/action_game_ten"
+            app:destination="@id/gameTenFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameOneFragment"
+        android:name="com.example.math.one.GameOneFragment"
+        android:label="fragment_game_one"
+        tools:layout="@layout/fragment_game_one" >
+        <action
+            android:id="@+id/action_one_score"
+            app:destination="@id/scoreFragment"
+            app:popUpTo="@id/gameOneFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/scoreFragment"
+        android:name="com.example.math.score.ScoreFragment"
+        android:label="fragment_score"
+        tools:layout="@layout/fragment_score" >
+        <argument
+            android:name="game"
+            app:argType="com.example.math.Game"
+            app:nullable="true"
+            android:defaultValue="@null" />
+        <argument
+            android:name="yourAnswer"
+            app:argType="integer"
+            android:defaultValue="-1" />
+        <argument
+            android:name="score"
+            app:argType="integer" />
+        <argument
+            android:name="type"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameTwoFragment"
+        android:name="com.example.math.two.GameTwoFragment"
+        android:label="fragment_game_two"
+        tools:layout="@layout/fragment_game_two" >
+        <action
+            android:id="@+id/action_two_score"
+            app:destination="@id/scoreFragment"
+            app:popUpTo="@id/gameTwoFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameThreeFragment"
+        android:name="com.example.math.three.GameThreeFragment"
+        android:label="fragment_game_three"
+        tools:layout="@layout/fragment_game_three" >
+        <action
+            android:id="@+id/actionScoreGameThree"
+            app:destination="@id/scoreGameThreeFragment"
+            app:popUpTo="@id/gameThreeFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/scoreGameThreeFragment"
+        android:name="com.example.math.three.ScoreGameThreeFragment"
+        android:label="fragment_score_game_three"
+        tools:layout="@layout/fragment_score_game_three" >
+        <argument
+            android:name="games"
+            app:argType="com.example.math.Game[]" />
+    </fragment>
+    <dialog
+        android:id="@+id/resetDialogFragment"
+        android:name="com.example.math.reset.ResetDialogFragment"
+        android:label="fragment_reset_dialog"
+        tools:layout="@layout/fragment_reset_dialog" >
+        <action
+            android:id="@+id/action_resetDialogFragment_to_levelFragment2"
+            app:destination="@id/levelFragment"
+            app:popUpTo="@id/levelFragment"
+            app:popUpToInclusive="true" />
+        <argument
+            android:name="type"
+            app:argType="string" />
+    </dialog>
+    <fragment
+        android:id="@+id/gameFourFragment"
+        android:name="com.example.math.four.GameFourFragment"
+        android:label="fragment_game_four"
+        tools:layout="@layout/fragment_game_four" />
+    <fragment
+        android:id="@+id/gameFiveFragment"
+        android:name="com.example.math.five.GameFiveFragment"
+        android:label="fragment_game_five"
+        tools:layout="@layout/fragment_game_five" >
+        <argument
+            android:name="level"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_gameFiveFragment_to_gameEightScoreFragment"
+            app:destination="@id/gameEightScoreFragment"
+            app:popUpTo="@id/gameFiveFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/chooseLevelFragment"
+        android:name="com.example.math.ChooseLevelFragment"
+        android:label="fragment_choose_level"
+        tools:layout="@layout/fragment_choose_level" >
+        <action
+            android:id="@+id/action_chooseLevelFragment_to_gameFiveFragment"
+            app:destination="@id/gameFiveFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameSixFragment"
+        android:name="com.example.math.six.GameSixFragment"
+        android:label="fragment_game_six"
+        tools:layout="@layout/fragment_game_six" >
+        <action
+            android:id="@+id/action_gameSixFragment_to_scoreFragment"
+            app:destination="@id/scoreFragment"
+            app:popUpTo="@id/gameSixFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameSevenFragment"
+        android:name="com.example.math.seven.GameSevenFragment"
+        android:label="fragment_game_seven"
+        tools:layout="@layout/fragment_game_seven" >
+        <action
+            android:id="@+id/action_gameSevenFragment_to_gameSevenResultFragment"
+            app:destination="@id/gameSevenResultFragment"
+            app:popUpTo="@id/gameSevenFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameEightFragment"
+        android:name="com.example.math.eight.GameEightFragment"
+        android:label="fragment_game_eight"
+        tools:layout="@layout/fragment_game_eight" >
+        <action
+            android:id="@+id/action_game8_score"
+            app:destination="@id/gameEightScoreFragment"
+            app:popUpTo="@id/gameEightFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameEightScoreFragment"
+        android:name="com.example.math.eight.GameEightScoreFragment"
+        android:label="fragment_game_eight_score"
+        tools:layout="@layout/fragment_game_eight_score" >
+        <argument
+            android:name="score"
+            app:argType="integer" />
+        <argument
+            android:name="type"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameNineFragment"
+        android:name="com.example.math.nine.GameNineFragment"
+        android:label="fragment_game_nine"
+        tools:layout="@layout/fragment_game_nine" >
+        <action
+            android:id="@+id/action_gameNineFragment_to_gameNineHelpFragment"
+            app:destination="@id/gameNineHelpFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameSevenResultFragment"
+        android:name="com.example.math.GameSevenResultFragment"
+        android:label="fragment_game_seven_result"
+        tools:layout="@layout/fragment_game_seven_result" >
+        <argument
+            android:name="pointTop"
+            app:argType="integer" />
+        <argument
+            android:name="pointDown"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_gameSevenResultFragment_to_gameSevenFragment"
+            app:destination="@id/gameSevenFragment"
+            app:popUpTo="@id/gameSevenResultFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameTenFragment"
+        android:name="com.example.math.ten.GameTenFragment"
+        android:label="fragment_game_ten"
+        tools:layout="@layout/fragment_game_ten" />
+    <fragment
+        android:id="@+id/gameNineHelpFragment"
+        android:name="com.example.math.nine.GameNineHelpFragment"
+        android:label="fragment_game_nine_help"
+        tools:layout="@layout/fragment_game_nine_help" >
+        <argument
+            android:name="games"
+            app:argType="com.example.math.Game[]" />
+    </fragment>
+</navigation>

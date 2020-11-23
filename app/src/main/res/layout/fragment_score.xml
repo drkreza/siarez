@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".score.ScoreFragment">
+
+    <TextView
+        android:id="@+id/txtScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textColor="@color/blue"
+        android:textSize="32dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imgCup"
+        app:layout_constraintEnd_toStartOf="@+id/imgCup"
+        app:layout_constraintTop_toTopOf="@+id/imgCup" />
+
+    <TextView
+        android:id="@+id/txtBestScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/blue"
+        android:textSize="32dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imgCup"
+        app:layout_constraintStart_toEndOf="@+id/imgCup"
+        app:layout_constraintTop_toTopOf="@+id/imgCup"
+        tools:text="200" />
+
+    <ImageView
+        android:id="@+id/imgCup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_cup_grey"
+        app:layout_constraintBottom_toTopOf="@+id/txtQuestionScore"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/txtQuestionScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:textColor="@color/red"
+        android:textSize="32dp"
+        app:layout_constraintBottom_toTopOf="@+id/txtYourAnswer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgCup"
+        tools:text="2 + 2 = ?" />
+
+    <TextView
+        android:id="@+id/txtYourAnswer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="32dp"
+        android:textColor="@color/red"
+        android:textSize="24dp"
+        app:layout_constraintBottom_toTopOf="@+id/txtAnswerScore"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtQuestionScore"
+        tools:text="Your Answer: 3" />
+
+    <TextView
+        android:id="@+id/txtAnswerScore"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        android:textColor="@color/green"
+        android:textSize="24dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnClosScore"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtYourAnswer"
+        tools:text="Right Answer: 4" />
+
+    <ImageButton
+        android:id="@+id/btnClosScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:background="@null"
+        android:src="@drawable/ic_check"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtAnswerScore" />
+</androidx.constraintlayout.widget.ConstraintLayout>

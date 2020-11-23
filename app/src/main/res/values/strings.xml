@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Math</string>
+    <string name="right_answer">Right Answer: %d</string>
+    <string name="right_answer_6">Right Answer: %s</string>
+    <string name="your_answer_1">Your Answer: %s</string>
+    <string name="your_answer_6">Your Answer: %s</string>
+    <string name="reset">Reset</string>
+    <string name="cancel">Cancel</string>
+    <string name="reset_progress">Reset progress?</string>
+
+    <string name="plus">\u002B</string>
+    <string name="minus">\u2212</string>
+    <string name="division">\u00F7</string>
+    <string name="multiplication">\u00D7</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
