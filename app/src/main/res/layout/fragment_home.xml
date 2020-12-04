@@ -1,12 +1,148 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".home.HomeFragment">
 
-    <ImageButton
+
+    <com.example.math.ClipRevealFrame
+        android:id="@+id/menu_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/tumblr_primary"
+        android:visibility="visible"
+        >
+
+        <com.ogaclejapan.arclayout.ArcLayout
+            android:id="@+id/arc_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:arc_axisRadius="@dimen/layout_child_offset_tumblr"
+            app:arc_origin="center"
+            app:arc_radius="@dimen/layout_radius_tumblr"
+            >
+
+
+            <ImageView
+                android:id="@+id/btnGame1"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/btn_circle_selector"
+                android:padding="16dp"
+                android:src="@drawable/ic_timer"
+
+                style="@style/Item.Tumblr"
+                />
+
+            <ImageView
+                android:id="@+id/btnGame2"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/btn_circle_selector"
+                android:padding="16dp"
+                android:src="@drawable/ic_hourglass"
+
+                style="@style/Item.Tumblr"
+                />
+
+            <ImageView
+                android:id="@+id/btnGame3"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/btn_circle_selector"
+                android:padding="16dp"
+                android:src="@drawable/ic_dialpad"
+
+                style="@style/Item.Tumblr"
+                />
+
+            <ImageView
+                android:id="@+id/btnGame4"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/btn_circle_selector"
+                android:padding="16dp"
+                android:src="@drawable/ic_memory_game"
+
+                style="@style/Item.Tumblr"
+                />
+
+            <ImageView
+                android:id="@+id/btnGame5"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/btn_circle_selector"
+                android:padding="16dp"
+                android:src="@drawable/ic_sigma"
+
+                style="@style/Item.Tumblr"
+                />
+
+            <ImageView
+                android:id="@+id/btnGame6"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/btn_circle_selector"
+                android:gravity="center"
+                android:padding="16dp"
+                android:src="@drawable/ic_empty"
+                android:textColor="@android:color/white"
+                android:textSize="20dp"
+                android:text= "$PLUS $MINUS\n$MULTIPLICATION $DIVISION"
+                />
+
+            <ImageView
+                android:id="@+id/btnGame8"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/btn_circle_selector"
+                android:gravity="center"
+                android:padding="16dp"
+                android:src="@drawable/ic_empty"
+                android:text="x = ?"
+                android:textColor="@android:color/white"
+                android:textSize="20dp"
+                />
+
+            <ImageView
+                android:id="@+id/btnGame9"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/btn_circle_selector"
+                android:padding="16dp"
+                android:src="@drawable/ic_puzzle"
+                style="@style/Item.Tumblr"
+                />
+
+            <ImageView
+                android:id="@+id/btnGame10"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/btn_circle_selector"
+                android:padding="16dp"
+                android:src="@drawable/ic_connect"
+
+                style="@style/Item.Tumblr"
+                />
+
+        </com.ogaclejapan.arclayout.ArcLayout>
+
+        <ImageView
+            android:id="@+id/btnGame7"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@drawable/btn_circle_selector"
+            android:padding="16dp"
+            android:src="@drawable/ic_fight"
+            android:layout_gravity="center"
+            />
+
+    </com.example.math.ClipRevealFrame>
+
+
+  <!--  <ImageButton
         android:id="@+id/btnGame1"
         android:layout_width="80dp"
         android:layout_height="80dp"
@@ -81,17 +217,6 @@
         app:layout_constraintStart_toEndOf="@+id/btnGame5"
         app:layout_constraintTop_toTopOf="@+id/btnGame5" />
 
-    <ImageButton
-        android:id="@+id/btnGame7"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:background="@drawable/btn_circle_selector"
-        android:padding="16dp"
-        android:src="@drawable/ic_fight"
-        app:layout_constraintBottom_toBottomOf="@+id/btnGame8"
-        app:layout_constraintEnd_toStartOf="@+id/btnGame5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/btnGame8" />
 
     <TextView
         android:id="@+id/btnGame8"
@@ -132,5 +257,5 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnGame8" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        app:layout_constraintTop_toBottomOf="@+id/btnGame8" />-->
+</RelativeLayout>

@@ -22,7 +22,7 @@ class HomeFragment : Fragment(R.layout.fragment_home), View.OnClickListener {
         super.onViewCreated(view, savedInstanceState)
         _binding = FragmentHomeBinding.bind(view)
 
-        binding.btnGame6.text = "$PLUS $MINUS\n$MULTIPLICATION $DIVISION"
+//        binding.btnGame6.text = "$PLUS $MINUS\n$MULTIPLICATION $DIVISION"
         viewModel.test()
 
         binding.btnGame1.setOnClickListener(this)
