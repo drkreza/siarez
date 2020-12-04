@@ -1,0 +1,84 @@
+{
+  "project_info": {
+    "project_number": "984550639238",
+    "project_id": "mathgames-37c2e",
+    "storage_bucket": "mathgames-37c2e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:984550639238:android:025e04fb55a468c568f307",
+        "android_client_info": {
+          "package_name": "com.example.math"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "984550639238-pvjllo373d8utdorqsmarmo3ce5got6r.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.math",
+            "certificate_hash": "c4460ff3c06cf44f2a1ef3f01de7fedfd9b7dba7"
+          }
+        },
+        {
+          "client_id": "984550639238-r7kc39hooue1j51f1mcft7tj9nu1ar32.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAu2d59opcXLHgtBOX12Twov0_g70LiaeE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "984550639238-r7kc39hooue1j51f1mcft7tj9nu1ar32.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:984550639238:android:4b5b4efbd90cb64068f307",
+        "android_client_info": {
+          "package_name": "com.siarez.math"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "984550639238-g0vhmqdah3b2eliav1a6mqs3189stjlp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.siarez.math",
+            "certificate_hash": "c4460ff3c06cf44f2a1ef3f01de7fedfd9b7dba7"
+          }
+        },
+        {
+          "client_id": "984550639238-r7kc39hooue1j51f1mcft7tj9nu1ar32.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAu2d59opcXLHgtBOX12Twov0_g70LiaeE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "984550639238-r7kc39hooue1j51f1mcft7tj9nu1ar32.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
