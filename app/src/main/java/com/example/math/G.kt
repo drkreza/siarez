@@ -8,12 +8,15 @@ import com.google.android.gms.tasks.OnCompleteListener
 import com.google.firebase.messaging.FirebaseMessaging
 
 class G : Application() {
+
     companion object {
         lateinit var context: Context
+        var appVersion = ""
     }
 
     override fun onCreate() {
         super.onCreate()
+        appVersion = PublicMethods.getAppVersion(this)
         context = applicationContext
 
         FirebaseMessaging.getInstance().token.addOnCompleteListener(OnCompleteListener { task ->
