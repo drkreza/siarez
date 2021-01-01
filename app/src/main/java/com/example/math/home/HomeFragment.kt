@@ -1,17 +1,16 @@
 package com.example.math.home
 
+import android.graphics.Color
 import android.os.Bundle
-import android.util.Log
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
-import com.example.math.GameUtil
 import com.example.math.R
 import com.example.math.databinding.FragmentHomeBinding
 import com.example.math.utils.*
+import com.example.math.view.PolygonalDrwable
+import kotlinx.android.synthetic.main.fragment_home.*
 
 class HomeFragment : Fragment(R.layout.fragment_home), View.OnClickListener {
     private var _binding: FragmentHomeBinding? = null
@@ -24,6 +23,17 @@ class HomeFragment : Fragment(R.layout.fragment_home), View.OnClickListener {
 
 //        binding.btnGame6.text = "$PLUS $MINUS\n$MULTIPLICATION $DIVISION"
         viewModel.test()
+
+        binding.btnGame1.background = PolygonalDrwable(Color.GREEN, 6)
+        binding.btnGame2.background = PolygonalDrwable(Color.GREEN, 6)
+        binding.btnGame3.background = PolygonalDrwable(Color.GREEN, 6)
+        binding.btnGame4.background = PolygonalDrwable(Color.GREEN, 6)
+        binding.btnGame5.background = PolygonalDrwable(Color.MAGENTA, 6)
+        binding.btnGame6.background = PolygonalDrwable(Color.MAGENTA, 6)
+        binding.btnGame7.background = PolygonalDrwable(Color.MAGENTA, 6)
+        binding.btnGame8.background = PolygonalDrwable(Color.YELLOW, 6)
+        binding.btnGame9.background = PolygonalDrwable(Color.YELLOW, 6)
+        binding.btnGame10.background = PolygonalDrwable(Color.YELLOW, 6)
 
         binding.btnGame1.setOnClickListener(this)
         binding.btnGame2.setOnClickListener(this)
